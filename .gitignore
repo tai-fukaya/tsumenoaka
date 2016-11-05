@@ -1,0 +1,25 @@
+# NPM
+node_modules/
+npm-debug.log
+
+# キャッシュフォルダを無視
+.sass-cache/
+.idea/
+
+# 下階層全てのフォルダ内で ".DS_Store" ファイルを無視
+*/.DS_Store
+
+# 下階層全てのフォルダ内で拡張子が .psd のファイルを無視
+*/*.psd
+
+# トップ階層の .exe ファイルのみを無視
+# ただしサブフォルダ内の .exe ファイルは無視しない
+/*.exe
+
+# 設定ファイル
+setting.js
+
+# dataフォルダ以下は無視
+data/*
+
+!**/.gitkeep
