@@ -3,24 +3,57 @@ const Tweet = require('./Tweet');
 const setting = require('./setting');
 const fs = require('fs');
 
-let screenName = 'liuliu_taifuun';
+let screenName = 'ochyai';
 
 let tweet = new Tweet(setting);
-tweet.getUserTimeline({
-	screen_name: screenName
-},function callback(error, tweets) {
-	if (error) console.err(error);
-	console.log(`tweets: ${tweets.length}`);
-	// lengthが１以下、または、エラーなら、終了
-	let items = [];
-	tweets.map((tweet) => {
-		
-		items.push(tweet.text);
+let items = [];
+
+// できるだけすべてのツイートの取得
+getAllTweets(screenName);
+
+function getTweets(option, callback) {
+	tweet.getUserTimeline(option, callback);
+}
+
+function getAllTweets(screenName) {
+	let maxId = undefined;
+	let count = 200;
+	tweet.getUserTimeline({
+		screen_name: screenName,
+		count: count
+	},function callback(error, tweets) {
+		if (error) {
+			console.err(error);
+			outputTweets();
+			return;
+		}
+		console.log(`tweets: ${tweets.length}`);
+		// lengthが１以下、または、エラーなら、終了
+		if (tweets.length <= 1) {
+			console.log('finish');
+			outputTweets();
+			return;
+		}
+
+		tweets.map((tweet, index) => {
+			// maxIdも含めて検索するので、２回目は省く
+			if (index === 0 && maxId) {
+				return;
+			}
+			items.push(tweet.text);
+		});
+
+		// これをキーにして、過去分を取得する
+		maxId = tweets[tweets.length - 1].id_str;
+		console.log(maxId);
+		tweet.getUserTimeline({
+			screen_name: screenName,
+			count: count,
+			max_id: maxId
+		}, callback);
 	});
-
-	// これをキーにして、過去分を取得する
-	console.log(tweets[tweets.length - 1].id_str);
-
+}
+function outputTweets() {
 	// ファイルに書き出し
 	let text = items.join('\n');
 	let now = Date.now();
@@ -40,4 +73,4 @@ tweet.getUserTimeline({
 			console.log(`success ${now} ${screenName}`);
 		}
 	);
-});
+}
