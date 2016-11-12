@@ -3,6 +3,7 @@ const Tweet = require('./Tweet');
 const setting = require('./setting');
 const fs = require('fs');
 
+// TODO できれば、引数から
 let screenName = 'ochyai';
 
 let tweet = new Tweet(setting);

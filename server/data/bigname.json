@@ -1,0 +1,548 @@
+[
+	{
+		"id": "ochyai",
+		"name": "落合陽一",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.5805493691514746
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.6818929019049685
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.1829554982621836
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.1548330268899173
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.43471613734914627
+			}
+		]
+	},
+	{
+		"id": "akiko_yosano",
+		"name": "与謝野晶子",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6555954477848297
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.8252204000841471
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.7351605115487041
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.9021972862415918
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.9165691568111316
+			}
+		]
+	},
+	{
+		"id": "ango_sakaguchi",
+		"name": "坂口安吾",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.7834463089642857
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.4828941649740532
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.6463581948447168
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.40050443385847023
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.8225483987154992
+			}
+		]
+	},
+	{
+		"id": "descarte",
+		"name": "デカルト",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.9172705685506112
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.058765472291338126
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.06596828706063093
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.06170097439756485
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.9625611028564184
+			}
+		]
+	},
+	{
+		"id": "fabre",
+		"name": "ファーブル",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.9397101241184593
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.7826336170007927
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.3621981122598497
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.4786239044562511
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.11062020614291215
+			}
+		]
+	},
+	{
+		"id": "fitzgerald",
+		"name": "フィッツジェラルド",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6373488837741624
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.5337053322191128
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.8305346527641018
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.9484201164973145
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.3160395781038611
+			}
+		]
+	},
+	{
+		"id": "gandhi",
+		"name": "ガンジー",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.9408021112461742
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.26435813436880357
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.5007851949275548
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.23502844022489167
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.510467279078686
+			}
+		]
+	},
+	{
+		"id": "goethe",
+		"name": "ゲーテ",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6749172266533532
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.42138799657092463
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.8537065973526516
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.6498079335525334
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.41599704659843234
+			}
+		]
+	},
+	{
+		"id": "hemmingway",
+		"name": "ヘミングウェイ",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.5632983920227816
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.3997978816406237
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.9235253216199788
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.9681352403114605
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.2283301952245513
+			}
+		]
+	},
+	{
+		"id": "kenji_miyazawa",
+		"name": "宮沢賢治",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6502491860149706
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.44275867606952507
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.1342433125009045
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.48018507235268443
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.6252417415616967
+			}
+		]
+	},
+	{
+		"id": "lewis_carroll",
+		"name": "ルイス・キャロル",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.5271844816112847
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.1425770005646215
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.9157603727514079
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.9190780429505166
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.3913552439412331
+			}
+		]
+	},
+	{
+		"id": "nankichi_niimi",
+		"name": "新美南吉",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6517084678933323
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.5013072281022548
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.35824415120533465
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.07896585851530814
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.8008413662358356
+			}
+		]
+	},
+	{
+		"id": "rojin",
+		"name": "魯迅",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6317671904627863
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.4230802711178247
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.9518421922621328
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.5086698955453357
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.99
+			}
+		]
+	},
+	{
+		"id": "ryunosuke_akutagawa",
+		"name": "芥川龍之介",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.7771883364447169
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.3236417251575986
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.9148461721951574
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.1891381817735823
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.8578308540373605
+			}
+		]
+	},
+	{
+		"id": "ryusei_kishida",
+		"name": "岸田劉生",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6529089407736295
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.5138011751763077
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.5118789759907654
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.30494630620117236
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.6936733922603776
+			}
+		]
+	},
+	{
+		"id": "shakespeare",
+		"name": "シェークスピア",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.3826993891813577
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.17880834657554726
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.9675248169423424
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.8227554011114531
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.4970966961405243
+			}
+		]
+	},
+	{
+		"id": "soetsu_yanagi",
+		"name": "柳宗悦",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.48087969060793107
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.823512691314313
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.46695820913992286
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.35618212348235656
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.99
+			}
+		]
+	},
+	{
+		"id": "soseki_natsume",
+		"name": "夏目漱石",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6405283846339122
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.41233325709857765
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.4561947742999829
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.5407072863499219
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.48354972309052074
+			}
+		]
+	},
+	{
+		"id": "takiji_kobayashi",
+		"name": "小林多喜二",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.6434783826640162
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.5880267888313184
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.43332929560769984
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.6878595015106701
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.8861509045386607
+			}
+		]
+	},
+	{
+		"id": "yasujiro_ozu",
+		"name": "小津安二郎",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.7509596242884615
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.5290257948803182
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.5062333329427339
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.4684686565636564
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.5759865179703949
+			}
+		]
+	},
+	{
+		"id": "yukichi_fukuzawa",
+		"name": "福沢諭吉",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.784138186248831
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.4817872456762107
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.4041617692202701
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.5042636653072827
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.5171935666799192
+			}
+		]
+	}
+]
