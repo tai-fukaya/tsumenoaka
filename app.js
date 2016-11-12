@@ -3,9 +3,9 @@
  * @author 深谷泰士
  */
 const http = require('http')
-    , express = require('express')
+	, express = require('express')
 	, path = require('path')
-    , app = express();
+	, app = express();
 
 // 静的ファイル
 app.use(express.static(path.join(__dirname, 'server')));
@@ -13,88 +13,20 @@ app.use(express.static(path.join(__dirname, 'server')));
 // サーバー始動
 let server = http.createServer(app);
 server.listen(3030, () => {
-    console.log('http://localhost:3030/');
+	console.log('http://localhost:3030/');
 });
 
 let io = require('socket.io')(server);
 
 let testdata = {
-	"bigname" : {
-		"id" : "donaldtrump",
-		"name" : "ドナルド・トランプ",
-		"personality" : [
-			{
-				"id" : "Openness",
-				"percentile" : 0.9146784881175186
-			},
-			{
-				"id" : "Conscientiousness",
-				"percentile" : 0.9669232451450606
-			},
-			{
-				"id" : "Extraversion",
-				"percentile" : 0.988866341794915
-			},
-			{
-				"id" : "Agreeableness",
-				"percentile" : 0.9349618657525601
-			},
-			{
-				"id" : "Neuroticism",
-				"percentile" : 0.9726571151399218
-			}
-		]
-	},
-	"tweet" : {
-		"id" : "janedoe",
-		"name" : "",
-		"personality" : [
-			{
-				"id" : "Openness",
-				"percentile" : 0.9146784881175186
-			},
-			{
-				"id" : "Conscientiousness",
-				"percentile" : 0.9669232451450606
-			},
-			{
-				"id" : "Extraversion",
-				"percentile" : 0.988866341794915
-			},
-			{
-				"id" : "Agreeableness",
-				"percentile" : 0.9349618657525601
-			},
-			{
-				"id" : "Neuroticism",
-				"percentile" : 0.9726571151399218
-			}
-		]
-	},
-	"diff" : {
-		"personality" : [
-			{
-				"id" : "Openness",
-				"percentile" : 0.9146784881175186
-			},
-			{
-				"id" : "Conscientiousness",
-				"percentile" : 0.9669232451450606
-			},
-			{
-				"id" : "Extraversion",
-				"percentile" : 0.988866341794915
-			},
-			{
-				"id" : "Agreeableness",
-				"percentile" : 0.9349618657525601
-			},
-			{
-				"id" : "Neuroticism",
-				"percentile" : 0.9726571151399218
-			}
-		]
-	}
+	bignameId: 'donaldtrump',
+	twitterId: 'test',
+	personality:
+	[{ id: 'Openness', bigname: 0.91, tweet: 0.2, diff: 0.71 },
+	{ id: 'Conscientiousness', bigname: 0.96, tweet: 0.98, diff: -0.02 },
+	{ id: 'Extraversion', bigname: 0.98, tweet: 0.5, diff: 0.48 },
+	{ id: 'Agreeableness', bigname: 0.4, tweet: 0.9, diff: -0.5 },
+	{ id: 'Neuroticism', bigname: 0.97, tweet: 0.6, diff: 0.37 }]
 };
 
 // 管理者
@@ -104,6 +36,15 @@ let appIo = io.of('/app');
 
 adminIo.on('connect', (socket) => {
 	console.log('admin connect');
+	socket.on('send generate data', (data) => {
+		// ファイルに保存
+		console.log(data);
+		
+		appIo.emit('success generate', data);
+	});
+	socket.on('init', (data) => {
+		appIo.emit('init');
+	});
 });
 
 appIo.on('connect', (socket) => {
@@ -116,7 +57,12 @@ appIo.on('connect', (socket) => {
 		// ツイートを取得して
 
 		// 結果をファイル保存と管理者画面に送信
-		
+		adminIo.emit('request generate', {
+			bignameId : data.bignameId,
+			twitterId : data.twitterId,
+			result : 'テスト'
+		});
+
 		// エラー、または、結果がゼロならば、エラーメッセージ
 		// socket.emit('error generate');
 	});

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<title>ツメノアカ管理画面</title>
+	<link rel="stylesheet" href="./styles/admin.css">
+	<script src="./scripts/jquery-1.12.4.min.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+</head>
+<body>
+	<h2>ツメノアカジェネレーター管理画面</h2>
+	<div id="area-show-data">
+		<h3>ツイッター取得結果</h3>
+		<textarea class="js-twitter-result" rows="10" cols="100"></textarea>
+		<h3>性格分析解析結果</h3>
+		<table>
+			<thead class="js-tsumenoaka-head">
+				<tr>
+					<th></th>
+					<th class="bigname">
+						対象<br>
+						<input type="text" class="js-bigname-id"></input>
+					</th>
+					<th class="tweet">
+						ツイッター<br>
+						<input type="text" class="js-twitter-id"></input>
+					</th>
+					<th>調合</th>
+				</tr>
+			</thead>
+			<tbody class="js-tsumenoaka-data">
+				<tr class="openness">
+					<td>Openness</td>
+					<td><input type="text" class="js-bigname-value"></input></td>
+					<td><input type="text" class="js-tweet-value"></input></td>
+					<td><input type="text" class="js-diff-value" disabled></input></td>
+				</tr>
+				<tr class="conscientiousness">
+					<td>Conscientiousness</td>
+					<td><input type="text" class="js-bigname-value"></input></td>
+					<td><input type="text" class="js-tweet-value"></input></td>
+					<td><input type="text" class="js-diff-value" disabled></input></td>
+				</tr>
+				<tr class="extraversion">
+					<td>Extraversion</td>
+					<td><input type="text" class="js-bigname-value"></input></td>
+					<td><input type="text" class="js-tweet-value"></input></td>
+					<td><input type="text" class="js-diff-value" disabled></input></td>
+				</tr>
+				<tr class="agreeableness">
+					<td>Agreeableness</td>
+					<td><input type="text" class="js-bigname-value"></input></td>
+					<td><input type="text" class="js-tweet-value"></input></td>
+					<td><input type="text" class="js-diff-value" disabled></input></td>
+				</tr>
+				<tr class="neuroticism">
+					<td>Neuroticism</td>
+					<td><input type="text" class="js-bigname-value"></input></td>
+					<td><input type="text" class="js-tweet-value"></input></td>
+					<td><input type="text" class="js-diff-value" disabled></input></td>
+				</tr>
+			</tbody>
+		</table>
+		<button id="button-senddata" class="js-button-senddata">送信する</button>
+
+		<button id="button-init" class="js-button-init">ユーザー画面の初期化</button>
+	</div>
+
+	<script src="./scripts/admin.js" defer></script>
+</body>
+</html>

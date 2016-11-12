@@ -2,6 +2,8 @@
 	var $selectArea = $('#area-select-data'),
 		$showArea = $('#area-show-data');
 
+	$('.js-bigname').val($('.js-bigname option:first').val());
+	$('.js-twitter-id').val('');
 	$selectArea.show();
 	$showArea.hide();
 
@@ -20,7 +22,7 @@
 	});
 	// 初期表示状態に戻す
 	socket.on('init', function() {
-		$('.js-bigname').val('');
+		$('.js-bigname').val($('.js-bigname option:first').val());
 		$('.js-twitter-id').val('');
 		$selectArea.show();
 		$showArea.hide();
@@ -47,22 +49,19 @@
 	function showData(data) {
 		var $head = $('.js-tsumenoaka-head'),
 			$table = $('.js-tsumenoaka-data').empty();
-		$head.find('.bigname').text(data.bigname.name);
-		$head.find('.tweet').text('@' + data.tweet.id);
-		
+
+		// 名前の検索
+		var bigname = $('.js-bigname').find('option[value=' + data.bignameId + ']').text();
+		if (!bigname) {
+			bigname = data.bignameId;
+		}
+		$head.find('.bigname').text(bigname);
+		$head.find('.tweet').text('@' + data.twitterId);
+
 		var items = [];
 
-		// データの整形
-		data.bigname.personality.forEach(function(personality, index){
-			var item = {};
-			item.id = personality.id;
-			item.bigname = personality.percentile;
-			item.tweet = data.tweet.personality[index].percentile;
-			item.diff = data.diff.personality[index].percentile;
-			items.push(item);
-		});
 		// データの表示
-		items.forEach(function(item) {
+		data.personality.forEach(function(item) {
 			var $tr = $('<tr>');
 			$tr.append('<td>' + item.id + '</td>');
 			$tr.append('<td>' + ("" + item.bigname).slice(0, 4) + '</td>');
