@@ -1,5 +1,57 @@
 [
 	{
+		"id": "donaldtrump",
+		"name": "ドナルド・トランプ",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.9146784881175186
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.9669232451450606
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.988866341794915
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.9349618657525601
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.9726571151399218
+			}
+		]
+	},
+	{
+		"id": "obama",
+		"name": "バラク・オバマ",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.8168908223750713
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.9825150597778023
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.7727759827591061
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.5832197940172072
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.9920645277031138
+			}
+		]
+	},
+	{
 		"id": "ochyai",
 		"name": "落合陽一",
 		"personality" : [

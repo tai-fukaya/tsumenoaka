@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<title>ツメノアカジェネレーター</title>
+	<link rel="stylesheet" href="./styles/app.css">
+	<script src="./scripts/jquery-1.12.4.min.js" defer></script>
+	<script src="/socket.io/socket.io.js" defer></script>
+</head>
+<body>
+	<h2>ツメノアカジェネレーター</h2>
+	<div id="area-select-data">
+		<!-- 誰のツメノアカを作りますか？ -->
+		<h3>誰のツメノアカをつくりますか？</h3>
+		<select class="js-bigname" id="bigname" name="bigname">
+			<option value="donaldtrump">ドナルド・トランプ</option>
+			<option value="barackobama">バラク・オバマ</option>
+			<option value="ochyai">落合陽一</option>
+		</select>
+		<!-- あなたのツイッターアカウント名を入力してください。 -->
+		<h3>あなたのツイッターアカウント名を入力してください。</h3>
+		<input type="text" class="js-twitter-id" id="twitter-id" name="twitter-id"></input>
+		<p>※ツイッターアカウント名は、公開アカウントを指定してください。</p>
+		<br>
+		<!-- 生成する。 -->
+		<button id="button-generate-tsumenoaka" class="js-button-generate">生成する</button>
+		<!-- メッセージ -->
+		<p class="js-message">
+			ツイートが見つかりません。
+		</p>
+	</div>
+	<div id="area-show-data">
+		<!-- ツメノアカの調合を生成しました。 -->
+		<h3>ツメノアカの調合を生成しました。</h3>
+		<table>
+			<thead class="js-tsumenoaka-head">
+				<tr>
+					<th></th>
+					<th class="bigname"></th>
+					<th class="tweet"></th>
+					<th>調合</th>
+				</tr>
+			</thead>
+			<tbody class="js-tsumenoaka-data">
+				<tr>
+					<td>Openness</td>
+					<td>0.92</td>
+					<td>0.81</td>
+					<td>0.11</td>
+				</tr>
+				<tr>
+					<td>Conscientiousness</td>
+					<td>0.55</td>
+					<td>0.31</td>
+					<td>0.24</td>
+				</tr>
+				<tr>
+					<td>Extraversion</td>
+					<td>0.10</td>
+					<td>0.82</td>
+					<td>-0.72</td>
+				</tr>
+				<tr>
+					<td>Agreeableness</td>
+					<td>0.92</td>
+					<td>0.81</td>
+					<td>0.11</td>
+				</tr>
+				<tr>
+					<td>Neuroticism</td>
+					<td>0.55</td>
+					<td>0.31</td>
+					<td>0.24</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+		・スタッフに調合をお見せください。<br>
+		・今回作成されたツメノアカは、食用ではありません。</p>
+	</div>
+
+	<script src="./scripts/app.js" defer></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ const setting = require('./setting');
 const fs = require('fs');
 
 // TODO できれば、引数から
-let screenName = 'ochyai';
+let screenName = 'ttsastestggg';
 
 let tweet = new Tweet(setting);
 let items = [];
@@ -20,7 +20,7 @@ function getAllTweets(screenName) {
 		count: count
 	},function callback(error, tweets) {
 		if (error) {
-			console.err(error);
+			console.error(error);
 			outputTweets();
 			return;
 		}
@@ -58,7 +58,7 @@ function outputTweets() {
 		`data/${screenName}.raw.txt`,
 		text,
 		(err) => {
-			if (err) console.err(err);
+			if (err) console.error(err);
 			console.log('success raw');
 		}
 	);
@@ -66,7 +66,7 @@ function outputTweets() {
 		`data/${screenName}.txt`,
 		text.replace(/(RT|@|http)[^ \n]*/g, ''), // RT @{hoge}, http{hoge}は削除
 		(err) => {
-			if (err) console.err(err);
+			if (err) console.error(err);
 			console.log(`success ${now} ${screenName}`);
 		}
 	);

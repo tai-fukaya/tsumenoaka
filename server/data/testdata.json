@@ -1,24 +1,4 @@
-'use strict';
-/**
- * @author 深谷泰士
- */
-const http = require('http')
-    , express = require('express')
-	, path = require('path')
-    , app = express();
-
-// 静的ファイル
-app.use(express.static(path.join(__dirname, 'server')));
-
-// サーバー始動
-let server = http.createServer(app);
-server.listen(3030, () => {
-    console.log('http://localhost:3030/');
-});
-
-let io = require('socket.io')(server);
-
-let testdata = {
+{
 	"bigname" : {
 		"id" : "donaldtrump",
 		"name" : "ドナルド・トランプ",
@@ -95,29 +75,4 @@ let testdata = {
 			}
 		]
 	}
-};
-
-// 管理者
-let adminIo = io.of('/admin');
-// アプリ
-let appIo = io.of('/app');
-
-adminIo.on('connect', (socket) => {
-	console.log('admin connect');
-});
-
-appIo.on('connect', (socket) => {
-	console.log('app connect');
-	socket.on('generate', (data) => {
-		console.log(data);
-		// 仮のデータ
-		socket.emit('success generate', testdata);
-
-		// ツイートを取得して
-
-		// 結果をファイル保存と管理者画面に送信
-		
-		// エラー、または、結果がゼロならば、エラーメッセージ
-		// socket.emit('error generate');
-	});
-});
+}

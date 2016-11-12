@@ -23,6 +23,11 @@
 			"taskName": "start",
 			"args": ["run", "start"],
 			"isBuildCommand": true
+		},
+		{
+			"taskName": "tweet",
+			"args": ["run", "tweet"],
+			"isBuildCommand": false
 		}
 	]
 }
