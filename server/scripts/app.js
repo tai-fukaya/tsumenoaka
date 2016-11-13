@@ -32,7 +32,8 @@
 	$('.js-button-generate').on('click', function() {
 		var bignameId = $('.js-bigname').val(),
 			twitterId = $('.js-twitter-id').val();
-
+		$('.js-message').text('');
+		
 		if (!bignameId || !twitterId) {
 			return;
 		}
