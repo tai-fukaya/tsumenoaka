@@ -64,6 +64,14 @@ appIo.on('connect', (socket) => {
 	socket.on('generate', (data) => {
 		console.log(data);
 
+		// ツイート取得をしたくない場合は、こちらのコメントアウトを外す
+		// // 管理者画面に送信
+		// adminIo.emit('request generate', {
+		// 	bignameId : data.bignameId,
+		// 	twitterId : data.twitterId,
+		// 	result : 'てすと'
+		// });
+
 		// ツイートを取得して
 		getAllTweets(data.twitterId, function(err, tweet) {
 			console.log((tweet || []).length);
