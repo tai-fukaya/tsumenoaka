@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style:normal;
+  font-weight: normal;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section, video {
+  display: block;
+}
+
+html{
+  overflow-y: scroll;
+  font-family: YuMincho, '游明朝', serif;
+  font-size: 14px;
+  line-height: 1.42857;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+input, textarea,{
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul{
+  list-style:none;
+}
+
+table{
+  border-collapse: collapse;
+  border-spacing:0;
+}
+
+caption, th{
+  text-align: left;
+}
+
+a:focus {
+  outline:none;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  min-height: 1px;
+}
+
+* html .clearfix {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+.both{
+  clear:both;
+}
+
+.inline_block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+a, a:hover {
+  text-decoration: none;
+}
+a,a:hover {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body {
+	margin: 0;  
+	position: relative;
+	display: block;  
+	width: 100%; 
+	height: 1024px;
+	padding: 57px;
+	background: url('../images/bg.png') no-repeat center;
+	background-size: cover;
+	box-sizing: border-box;
+}
+
+.wrap {
+	width: 654px;
+	min-width: 654px;
+	display: block;
+	position: absolute;
+	z-index: 0; 
+	top: 57px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0 auto;
+	background: #fff;
+	padding: 62px; 
+	border: 1px solid #231815;
+	box-sizing: border-box;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 1%;
+		left: 50%;
+		transform: translate(-50%);
+		width: 98%;
+		height: 98%;
+		display: block;
+		border: 1px solid #231815;
+	}
+	h2 { 
+		img {
+			display: block;
+			width: 163px;
+			margin: 0 auto;   
+		} 		
+	}
+	h3.tit_1 {
+		margin: 90px 0 0;
+		img {
+			width: 363px; 
+			display: block;
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: relative;
+			width: 100%; 
+			border-bottom: 1px solid #231815;
+			margin: 5px 0 0;
+		}
+	}
+	.js-bigname {
+		position: relative;
+		z-index: 100;
+		border: none;
+		background: none;
+		width: 100%;
+		margin: 5px 0 0;  
+	}
+	h3.tit_2 {
+		margin: 90px 0 0;
+		img {
+			width: 167px; 
+			display: block;
+		}
+		&:after {
+			content: "";
+			display: block;
+			width: 100%; 
+			position: relative;
+			border-bottom: 1px solid #231815;
+			margin: 5px 0 0; 
+		}
+	}
+	#area-select-data {
+		display: none!important; 
+	}
+	#area-show-data {
+		display: block!important;
+		canvas {
+			width: 400px; 
+			margin: 90px auto 0; 
+		} 
+		table {
+			width: 100%;
+			height: 260px;
+			margin: 40px 0 0; 
+			background: url('../images/grid.png') top left no-repeat;
+			-webkit-background-size:  528px; 
+			-o-background-size:  528px; 
+			background-size:  528px;
+			.js-tsumenoaka-data {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			    display: block;
+				margin: 40px 0 0 180px; 
+				tr { 
+					td {
+						width: 120px; 
+						padding: 12px 0 13px 38px; 
+					}
+				}
+			}
+		}
+		p {
+			font-size: 12px;
+			text-align: right;
+			color: #666;
+			line-height: 24px;  
+		}
+	}
+	.js-twitter-id {
+		position: relative;
+		z-index: 100;
+		margin: 5px 0 0; 
+		width: 100%;
+		padding: 0;
+		border: none; 
+		-webkit-box-sizing: border-box;
+		  -moz-box-sizing: border-box;
+		  box-sizing: border-box;
+	}
+	button {
+		position: relative;
+		z-index: 100; 
+		border: 1px solid #231815;
+		background: none; 
+		display: block;
+		margin: 90px auto 0; 
+		padding: 10px 15px;
+		img {
+			display: block; 
+			width: 76px; 
+		}
+	}
+}
