@@ -97,7 +97,7 @@
 		// データの表示
 		data.personality.forEach(function(item) {
 			var $tr = $('<tr>');
-			$tr.append('<td>' + item.id + '</td>');
+			// $tr.append('<td>' + item.id + '</td>');
 			$tr.append('<td>' + ("" + item.bigname).slice(0, 4) + '</td>');
 			$tr.append('<td>' + ("" + item.tweet).slice(0, 4) + '</td>');
 			$tr.append('<td>' + ("" + item.diff).slice(0, 4) + '</td>');
