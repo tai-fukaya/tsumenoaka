@@ -46,51 +46,52 @@
 		console.log(bignameId, twitterId);
 	});
 
-	var ctx = $('#graph');
-	var data = {
-    labels: ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"],
-	    datasets: [
-	        {
-	            label: "Target",
-	            backgroundColor: "rgba(179,181,198,0.2)",
-	            borderColor: "rgba(179,181,198,1)",
-	            pointBackgroundColor: "rgba(179,181,198,1)",
-	            pointBorderColor: "#fff",
-	            pointHoverBackgroundColor: "#fff",
-	            pointHoverBorderColor: "rgba(179,181,198,1)",
-	            data: [65, 59, 90, 81, 56]
-	        },
-	        {
-	            label: "You",
-	            backgroundColor: "rgba(255,99,132,0.2)",
-	            borderColor: "rgba(255,99,132,1)",
-	            pointBackgroundColor: "rgba(255,99,132,1)",
-	            pointBorderColor: "#fff",
-	            pointHoverBackgroundColor: "#fff",
-	            pointHoverBorderColor: "rgba(255,99,132,1)",
-	            data: [28, 48, 40, 19, 96]
-	        }
-	    ]
-	};
-	var radar = new Chart(ctx,{
-	    type: 'radar',
-	    data: data
-	    // options: options
-	});
-
 
 	// showData(testdata);
 	function showData(data) {
-		var $head = $('.js-tsumenoaka-head'),
-			$table = $('.js-tsumenoaka-data').empty();
+
+		var ctx = $('#graph');
+		var gData = {
+	    labels: ["Openness", "Conscientiousness", "Extraversion", "Agreeableness", "Neuroticism"],
+		    datasets: [
+		        {
+		            label: "Target",
+		            backgroundColor: "rgba(179,181,198,0.2)",
+		            borderColor: "rgba(179,181,198,1)",
+		            pointBackgroundColor: "rgba(179,181,198,1)",
+		            pointBorderColor: "#fff",
+		            pointHoverBackgroundColor: "#fff",
+		            pointHoverBorderColor: "rgba(179,181,198,1)",
+		            data: [data.personality[0].bigname,data.personality[1].bigname,data.personality[2].bigname,data.personality[3].bigname,data.personality[4].bigname]
+		        },
+		        {
+		            label: "You",
+		            backgroundColor: "rgba(255,99,132,0.2)",
+		            borderColor: "rgba(255,99,132,1)",
+		            pointBackgroundColor: "rgba(255,99,132,1)",
+		            pointBorderColor: "#fff",
+		            pointHoverBackgroundColor: "#fff",
+		            pointHoverBorderColor: "rgba(255,99,132,1)",
+		            data: [data.personality[0].tweet,data.personality[1].tweet,data.personality[2].tweet,data.personality[3].tweet,data.personality[4].tweet]
+		        }
+		    ]
+		};
+		var radar = new Chart(ctx,{
+		    type: 'radar',
+		    data: gData
+		    // options: options
+		});
+
+		console.log(data)
+		var $table = $('.js-tsumenoaka-data').empty();
 
 		// 名前の検索
 		var bigname = $('.js-bigname').find('option[value=' + data.bignameId + ']').text();
 		if (!bigname) {
 			bigname = data.bignameId;
 		}
-		$head.find('.bigname').text(bigname);
-		$head.find('.tweet').text('@' + data.twitterId);
+		// $head.find('.bigname').text(bigname);
+		// $head.find('.tweet').text('@' + data.twitterId);
 
 		var items = [];
 
