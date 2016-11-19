@@ -62,7 +62,7 @@
 		            pointBorderColor: "#fff",
 		            pointHoverBackgroundColor: "#fff",
 		            pointHoverBorderColor: "rgba(179,181,198,1)",
-		            data: [data.bigname.personality[0].percentile, data.bigname.personality[1].percentile, data.bigname.personality[2].percentile, data.bigname.personality[3].percentile, data.bigname.personality[4].percentile]
+		            data: [data.personality[0].bigname,data.personality[1].bigname,data.personality[2].bigname,data.personality[3].bigname,data.personality[4].bigname]
 		        },
 		        {
 		            label: "You",
@@ -72,7 +72,7 @@
 		            pointBorderColor: "#fff",
 		            pointHoverBackgroundColor: "#fff",
 		            pointHoverBorderColor: "rgba(255,99,132,1)",
-		            data: [data.tweet.personality[0].percentile, data.tweet.personality[1].percentile, data.tweet.personality[2].percentile, data.tweet.personality[3].percentile, data.tweet.personality[4].percentile]
+		            data: [data.personality[0].tweet,data.personality[1].tweet,data.personality[2].tweet,data.personality[3].tweet,data.personality[4].tweet]
 		        }
 		    ]
 		};
@@ -81,6 +81,8 @@
 		    data: gData
 		    // options: options
 		});
+
+		console.log(data)
 		var $table = $('.js-tsumenoaka-data').empty();
 
 		// 名前の検索

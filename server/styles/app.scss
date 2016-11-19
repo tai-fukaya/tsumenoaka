@@ -188,8 +188,10 @@ body {
 		}
 	}
 	#area-select-data {
+		// display: none!important; 
 	}
 	#area-show-data {
+		// display: block!important;
 		canvas {
 			width: 400px; 
 			margin: 90px auto 0; 
