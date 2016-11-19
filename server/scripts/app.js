@@ -44,6 +44,10 @@
 		});
 
 		console.log(bignameId, twitterId);
+		setTimeout(function(){
+			$('.js-button-generate').hide();
+			$('.loader').show();
+		}, 500);
 	});
 
 
