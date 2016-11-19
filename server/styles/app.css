@@ -199,14 +199,6 @@ body {
   margin: 5px 0 0;
 }
 
-.wrap #area-select-data {
-  display: none !important;
-}
-
-.wrap #area-show-data {
-  display: block !important;
-}
-
 .wrap #area-show-data canvas {
   width: 400px;
   margin: 90px auto 0;
