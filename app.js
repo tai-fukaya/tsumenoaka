@@ -132,6 +132,12 @@ function getAllTweets(screenName, callback) {
 			items.push(tweet.text);
 		});
 
+		// 1000件以上取得している場合、終了
+		if (items.length >= 1000) {
+			console.log('tweet 1000');
+			callback(error, items);
+			return;
+		}
 		// これをキーにして、過去分を取得する
 		maxId = tweets[tweets.length - 1].id_str;
 		console.log(maxId);

@@ -15,6 +15,7 @@
 		showData(data);
 		$selectArea.hide();
 		$showArea.show();
+		$('.loader').hide();
 	});
 	// 生成がエラーならば
 	socket.on('error generate', function(data) {
@@ -105,7 +106,7 @@
 			// $tr.append('<td>' + item.id + '</td>');
 			$tr.append('<td>' + ("" + item.bigname).slice(0, 4) + '</td>');
 			$tr.append('<td>' + ("" + item.tweet).slice(0, 4) + '</td>');
-			$tr.append('<td>' + ("" + item.diff).slice(0, 4) + '</td>');
+			$tr.append('<td>' + ("" + item.diff).slice(0, 5) + '</td>');
 
 			$table.append($tr);
 		});
