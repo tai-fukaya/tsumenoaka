@@ -2,11 +2,29 @@
 	var $head = $('.js-tsumenoaka-head'),
 		$table = $('.js-tsumenoaka-data'),
 		$result = $('.js-twitter-result');
+	
+	var bignameMap = {};
+
+	// json
+	$.ajax({
+		type: 'GET',
+		url: 'data/bigname.json'
+	}).done(function(result) {
+		console.log(result);
+		if (!result.length) return;
+		$.each(result, function(index, bigname) {
+			bignameMap[bigname.id] = bigname;
+		});
+	}).fail(function(result) {
+		console.log(result);
+	});
 
 	// ソケット
 	var socket = io('/admin');
 	socket.on('request generate', function(data) {
 		showTweetResult(data);
+		var bignameData = bignameMap[data.bignameId];
+		if (bignameData) showPersonalityBigname(bignameData);
 	});
 	socket.on('show bigname personality', function(data) {
 		showPersonalityBigname(data);

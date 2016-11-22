@@ -1,5 +1,31 @@
 [
 	{
+		"id": "demon_kogure",
+		"name": "デーモン閣下",
+		"personality" : [
+			{
+				"id" : "Openness",
+				"percentile" : 0.998
+			},
+			{
+				"id" : "Conscientiousness",
+				"percentile" : 0.94
+			},
+			{
+				"id" : "Extraversion",
+				"percentile" : 0.81
+			},
+			{
+				"id" : "Agreeableness",
+				"percentile" : 0.44
+			},
+			{
+				"id" : "Neuroticism",
+				"percentile" : 0.39
+			}
+		]
+	},
+	{
 		"id": "donaldtrump",
 		"name": "ドナルド・トランプ",
 		"personality" : [

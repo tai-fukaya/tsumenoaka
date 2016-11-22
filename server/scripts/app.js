@@ -2,10 +2,14 @@
 	var $selectArea = $('#area-select-data'),
 		$showArea = $('#area-show-data');
 
-	$('.js-bigname').val($('.js-bigname option:first').val());
-	$('.js-twitter-id').val('');
-	$selectArea.show();
-	$showArea.hide();
+	function init () {
+		$('.js-bigname').val($('.js-bigname option:first').val());
+		$('.js-twitter-id').val('');
+		$selectArea.show();
+		$showArea.hide();
+		$('.js-button-generate').show();
+	}
+	init();
 
 	// ソケット
 	var socket = io('/app');
@@ -22,12 +26,7 @@
 		$('.js-message').text('ツイートが見つかりません');
 	});
 	// 初期表示状態に戻す
-	socket.on('init', function() {
-		$('.js-bigname').val($('.js-bigname option:first').val());
-		$('.js-twitter-id').val('');
-		$selectArea.show();
-		$showArea.hide();
-	});
+	socket.on('init', init);
 
 	// ツメノアカを生成する
 	$('.js-button-generate').on('click', function() {

@@ -24,17 +24,6 @@ server.listen(3030, () => {
 
 let io = require('socket.io')(server);
 
-let testdata = {
-	bignameId: 'donaldtrump',
-	twitterId: 'test',
-	personality:
-	[{ id: 'Openness', bigname: 0.91, tweet: 0.2, diff: 0.71 },
-	{ id: 'Conscientiousness', bigname: 0.96, tweet: 0.98, diff: -0.02 },
-	{ id: 'Extraversion', bigname: 0.98, tweet: 0.5, diff: 0.48 },
-	{ id: 'Agreeableness', bigname: 0.4, tweet: 0.9, diff: -0.5 },
-	{ id: 'Neuroticism', bigname: 0.97, tweet: 0.6, diff: 0.37 }]
-};
-
 // 管理者
 let adminIo = io.of('/admin');
 // アプリ
