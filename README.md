@@ -23,10 +23,10 @@ PCを管理者画面
 VSCODEの場合は、Shift + Command + B
 
 ## タブレットとPCに画面を表示する
-・PC
-http://localhost:3030/admin.html
-https://personality-insights-livedemo.mybluemix.net/
-・タブレット
+・PC  
+http://localhost:3030/admin.html  
+https://personality-insights-livedemo.mybluemix.net/  
+・タブレット  
 http://{ipaddress}:3030/app.html
 
 IPアドレスは、ターミナルでifconfigを叩いて調べる
